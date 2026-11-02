@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://48qkga4kij1x"]
+
+[ext_resource type="Texture2D" uid="uid://bfvdmwjpx708l" path="res://Image/Modern_weapons.png" id="1_3s7qs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vivr"]
+atlas = ExtResource("1_3s7qs")
+region = Rect2(32, 160, 32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8vrlf"]
+size = Vector2(26, 8)
+
+[node name="Gun_2" type="Node2D" unique_id=1299185138]
+position = Vector2(64, 0)
+scale = Vector2(5, 5)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1642485996]
+texture = SubResource("AtlasTexture_1vivr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=789295902]
+shape = SubResource("RectangleShape2D_8vrlf")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=2052085131]
+position = Vector2(13, -3.5)

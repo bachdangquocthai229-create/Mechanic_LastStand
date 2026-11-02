@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://ckudr8chj1kgo"]
+
+[ext_resource type="Script" uid="uid://80kl10p8d3vr" path="res://player.gd" id="1_kpjcp"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_xhfnw"]
+[ext_resource type="PackedScene" uid="uid://ok4vyy26tqy2" path="res://Item/Bullet.tscn" id="2_dvofn"]
+[ext_resource type="PackedScene" uid="uid://bblfcd7yvle5m" path="res://UI_moblie.tscn" id="3_kne1u"]
+[ext_resource type="PackedScene" uid="uid://vnh2yxskqu0m" path="res://Item/Gun_1.tscn" id="4_ssuvf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1vivr"]
+size = Vector2(120, 120)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g7b7a"]
+radius = 400.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1185532955]
+collision_mask = 2
+script = ExtResource("1_kpjcp")
+speed = 30000.0
+acceleration = 1000.0
+friction = 2000.0
+bullet_scene = ExtResource("2_dvofn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=223840307]
+texture = ExtResource("1_xhfnw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=354213814]
+shape = SubResource("RectangleShape2D_1vivr")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1008332496]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D" unique_id=1078214942]
+visible = false
+
+[node name="Control" parent="Camera2D/CanvasLayer" unique_id=597883338 instance=ExtResource("3_kne1u")]
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1417570552]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1177895561]
+shape = SubResource("CircleShape2D_g7b7a")
+
+[node name="Item_holder" type="Node2D" parent="." unique_id=1989079674]
+position = Vector2(50, 20)
+
+[node name="Gun_1" parent="Item_holder" unique_id=923993314 instance=ExtResource("4_ssuvf")]

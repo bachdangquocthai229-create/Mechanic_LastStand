@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://elst0xn32iil"]
 
-[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://Player.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://Character/Player.tscn" id="1_80nbo"]
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://b4tbnvxt4w2s8" path="res://Character/Enemy.tscn" id="3_feb5d"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1vivr"]
 normal = Vector2(0, 2.715)
@@ -14,6 +15,10 @@ distance = -475.67
 [node name="CharacterBody2D" parent="." unique_id=1185532955 instance=ExtResource("1_80nbo")]
 position = Vector2(400, 224)
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1694948934]
+position = Vector2(623, 132)
+texture = ExtResource("2_e2o6t")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=482013038]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1726105908]
@@ -22,5 +27,5 @@ shape = SubResource("WorldBoundaryShape2D_1vivr")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=2077681597]
 shape = SubResource("WorldBoundaryShape2D_8vrlf")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1694948934]
-texture = ExtResource("2_e2o6t")
+[node name="Enemy" parent="." unique_id=2033332469 instance=ExtResource("3_feb5d")]
+position = Vector2(817, 376)

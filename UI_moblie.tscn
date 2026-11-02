@@ -1,0 +1,219 @@
+[gd_scene format=3 uid="uid://bblfcd7yvle5m"]
+
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_8bonc"]
+[ext_resource type="Script" uid="uid://cfncg5qo860dt" path="res://menu.gd" id="2_djdjx"]
+[ext_resource type="Script" uid="uid://bc0064qy5yiw0" path="res://w.gd" id="2_jhwfo"]
+[ext_resource type="Script" uid="uid://bf6wkfi8dao7k" path="res://a.gd" id="4_pk76y"]
+[ext_resource type="Script" uid="uid://gsurenudrgjp" path="res://s.gd" id="5_r82je"]
+[ext_resource type="Script" uid="uid://dkio7ttcuanpq" path="res://d.gd" id="6_d4e6h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g7b7a"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 0)
+corner_detail = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gyc6d"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8bonc"]
+content_margin_top = 45.0
+bg_color = Color(0.6252648, 0.6252644, 0.6252646, 0.78431374)
+border_width_left = 4
+border_width_top = 8
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jhwfo"]
+bg_color = Color(0.31114936, 0.3111494, 0.3111494, 0.39215687)
+border_width_left = 8
+border_width_top = 16
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0, 0, 0.78431374)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kqykt"]
+content_margin_top = 45.0
+bg_color = Color(0.6252648, 0.6252644, 0.6252646, 0.78431374)
+border_width_left = 8
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gjjk5"]
+bg_color = Color(0.31114936, 0.3111494, 0.3111494, 0.39215687)
+border_width_left = 16
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0, 0, 0.78431374)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ocei"]
+content_margin_top = 45.0
+bg_color = Color(0.6252648, 0.6252644, 0.6252646, 0.78431374)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 8
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_djdjx"]
+bg_color = Color(0.31114936, 0.3111494, 0.3111494, 0.39215687)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 16
+border_color = Color(0, 0, 0, 0.78431374)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pk76y"]
+content_margin_top = 45.0
+bg_color = Color(0.6252648, 0.6252644, 0.6252646, 0.78431374)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 8
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r82je"]
+bg_color = Color(0.31114936, 0.3111494, 0.3111494, 0.39215687)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 16
+border_width_bottom = 8
+border_color = Color(0, 0, 0, 0.78431374)
+
+[node name="UI_mobile" type="Control" unique_id=597883338]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MENU" type="Button" parent="." unique_id=1061812822]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 136.0
+offset_bottom = 136.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_g7b7a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gyc6d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g7b7a")
+icon = ExtResource("1_8bonc")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_djdjx")
+
+[node name="WASD" type="Control" parent="." unique_id=2065091789]
+custom_minimum_size = Vector2(360, 360)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -376.0
+offset_right = 376.0
+offset_bottom = -16.0
+grow_vertical = 0
+
+[node name="W" type="Button" parent="WASD" unique_id=1510053909]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -60.0
+offset_right = 60.0
+offset_bottom = 120.0
+grow_horizontal = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_8bonc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jhwfo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8bonc")
+script = ExtResource("2_jhwfo")
+
+[node name="A" type="Button" parent="WASD" unique_id=1550313318]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -60.0
+offset_right = 120.0
+offset_bottom = 60.0
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_kqykt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gjjk5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kqykt")
+script = ExtResource("4_pk76y")
+
+[node name="S" type="Button" parent="WASD" unique_id=1306927483]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -60.0
+offset_top = -120.0
+offset_right = 60.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_0ocei")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_djdjx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0ocei")
+script = ExtResource("5_r82je")
+
+[node name="D" type="Button" parent="WASD" unique_id=1796086633]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -60.0
+offset_bottom = 60.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_pk76y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r82je")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pk76y")
+script = ExtResource("6_d4e6h")
+
+[node name="ATTACK" type="Button" parent="." unique_id=1865636320]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -176.0
+offset_top = -176.0
+offset_right = -39.999756
+offset_bottom = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+icon = ExtResource("1_8bonc")
+
+[connection signal="button_down" from="WASD/W" to="WASD/W" method="_on_button_down"]
+[connection signal="button_up" from="WASD/W" to="WASD/W" method="_on_button_up"]
+[connection signal="button_down" from="WASD/A" to="WASD/A" method="_on_button_down"]
+[connection signal="button_up" from="WASD/A" to="WASD/A" method="_on_button_up"]
+[connection signal="button_down" from="WASD/S" to="WASD/S" method="_on_button_down"]
+[connection signal="button_up" from="WASD/S" to="WASD/S" method="_on_button_up"]
+[connection signal="button_down" from="WASD/D" to="WASD/D" method="_on_button_down"]
+[connection signal="button_up" from="WASD/D" to="WASD/D" method="_on_button_up"]
