@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdktmi3ry5bt3"
-path="res://.godot/imported/Walking_albedo.png-26cd9b102c4ae886d8ceba9fb46cefd9.ctex"
+uid="uid://moyr6tp3jsa2"
+path="res://.godot/imported/Running_albedo.png-5c8b69a8756cfd0526fa1af9eb69f11c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Image/Walking_albedo.png"
-dest_files=["res://.godot/imported/Walking_albedo.png-26cd9b102c4ae886d8ceba9fb46cefd9.ctex"]
+source_file="res://Image/Running_albedo.png"
+dest_files=["res://.godot/imported/Running_albedo.png-5c8b69a8756cfd0526fa1af9eb69f11c.ctex"]
 
 [params]
 

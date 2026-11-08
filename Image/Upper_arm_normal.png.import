@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ll8pjs1ecl1o"
-path="res://.godot/imported/Left_walk_noraml.png-173195deae516ccc4e7bc1eb18a90e90.ctex"
+uid="uid://827j0ml7hh5m"
+path="res://.godot/imported/Upper_arm_normal.png-5d734a5d42b0523f2550a099eb0c8780.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Image/Left_walk_noraml.png"
-dest_files=["res://.godot/imported/Left_walk_noraml.png-173195deae516ccc4e7bc1eb18a90e90.ctex"]
+source_file="res://Image/Upper_arm_normal.png"
+dest_files=["res://.godot/imported/Upper_arm_normal.png-5d734a5d42b0523f2550a099eb0c8780.ctex"]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=false
 mipmaps/limit=-1

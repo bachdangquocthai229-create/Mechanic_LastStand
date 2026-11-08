@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ld313yr6wlxk"
-path="res://.godot/imported/Left_walk_albedo.png-d2633dce11bbf6f48af95ac2f76cfd07.ctex"
+uid="uid://b2h6tvt70d8bu"
+path="res://.godot/imported/Forearm_albedo.png-7dc8cc4e97d271a736620341df9ee5b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Image/Left_walk_albedo.png"
-dest_files=["res://.godot/imported/Left_walk_albedo.png-d2633dce11bbf6f48af95ac2f76cfd07.ctex"]
+source_file="res://Image/Forearm_albedo.png"
+dest_files=["res://.godot/imported/Forearm_albedo.png-7dc8cc4e97d271a736620341df9ee5b4.ctex"]
 
 [params]
 

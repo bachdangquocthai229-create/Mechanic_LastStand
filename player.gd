@@ -9,9 +9,6 @@ extends CharacterBody2D
 
 @onready var detection_area: Area2D = $DetectionArea
 
-@export var bullet_scene: PackedScene
-@onready var gun: Node2D = $Item_holder/Gun_1
-@onready var bullet_spawn: Marker2D = $Item_holder/Gun_1/Marker2D
 
 
 var is_mobile: bool = false
@@ -105,10 +102,4 @@ func _find_closest_enemy_in_area() -> Node2D:
 
 
 func shoot() -> void:
-	var bullet = bullet_scene.instantiate()
-	get_tree().current_scene.add_child(bullet)
-	bullet.global_position = bullet_spawn.global_position
-
-	# Hướng bắn theo hướng của súng
-	bullet.direction = Vector2.RIGHT.rotated(gun.global_rotation)
-	bullet.rotation = bullet.direction.angle()
+	pass
