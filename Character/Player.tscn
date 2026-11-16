@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://ckudr8chj1kgo"]
 
-[ext_resource type="Script" uid="uid://80kl10p8d3vr" path="res://player.gd" id="1_kpjcp"]
+[ext_resource type="Script" uid="uid://80kl10p8d3vr" path="res://Code/player.gd" id="1_kpjcp"]
+[ext_resource type="PackedScene" uid="uid://48qkga4kij1x" path="res://Item/Gun_2.tscn" id="3_28ti7"]
 [ext_resource type="Texture2D" uid="uid://moyr6tp3jsa2" path="res://Image/Running_albedo.png" id="3_d703b"]
 [ext_resource type="PackedScene" uid="uid://bblfcd7yvle5m" path="res://UI_moblie.tscn" id="3_kne1u"]
-[ext_resource type="Script" uid="uid://cumuf6mqw06yg" path="res://Character/right_arm.gd" id="4_28ti7"]
 [ext_resource type="Shader" uid="uid://c6vwi5ojogu26" path="res://Character/Normal_shader.gdshader" id="5_7llnk"]
-[ext_resource type="Texture2D" uid="uid://827j0ml7hh5m" path="res://Image/Upper_arm_normal.png" id="6_fo5vu"]
 [ext_resource type="Texture2D" uid="uid://dxuea2ymjm5gm" path="res://Image/Torso_normal_map.png" id="6_o1y46"]
-[ext_resource type="Texture2D" uid="uid://drioqfbs547ge" path="res://Image/Upper_arm_albedo.png" id="7_p4yhq"]
 [ext_resource type="Texture2D" uid="uid://dakumspwiad7k" path="res://Image/Torso_albedo.png" id="7_qolio"]
-[ext_resource type="Texture2D" uid="uid://davxlpetcv0t1" path="res://Image/Forearm_normal.png" id="8_iir43"]
 [ext_resource type="Texture2D" uid="uid://d00jt3bfn34k7" path="res://Image/Head_normal_map.png" id="8_y83ax"]
 [ext_resource type="Texture2D" uid="uid://b4v1mvm7jr1es" path="res://Image/Head_albedo.png" id="9_d703b"]
-[ext_resource type="Texture2D" uid="uid://b2h6tvt70d8bu" path="res://Image/Forearm_albedo.png" id="9_rk8it"]
+[ext_resource type="Script" uid="uid://dvg4gas0ibnx7" path="res://Code/arm_rig.gd" id="10_o1y46"]
+[ext_resource type="Texture2D" uid="uid://l22koyw4mgka" path="res://Image/Upper_arm_normal.png" id="11_d703b"]
+[ext_resource type="PackedScene" uid="uid://vnh2yxskqu0m" path="res://Item/Gun_1.tscn" id="12_y83ax"]
+[ext_resource type="Texture2D" uid="uid://dygcw6bkyxmqx" path="res://Image/Forearm_albedo.png" id="13_28ti7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1vivr"]
 size = Vector2(120, 120)
@@ -119,14 +119,6 @@ animations = [{
 "speed": 12.0
 }]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_v5gy4"]
-shader = ExtResource("5_7llnk")
-shader_parameter/normal_map = ExtResource("6_fo5vu")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_qbdty"]
-shader = ExtResource("5_7llnk")
-shader_parameter/normal_map = ExtResource("8_iir43")
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8vrlf"]
 shader = ExtResource("5_7llnk")
 shader_parameter/normal_map = ExtResource("6_o1y46")
@@ -135,7 +127,15 @@ shader_parameter/normal_map = ExtResource("6_o1y46")
 shader = ExtResource("5_7llnk")
 shader_parameter/normal_map = ExtResource("8_y83ax")
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1185532955]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7lipg"]
+shader = ExtResource("5_7llnk")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tfriy"]
+shader = ExtResource("5_7llnk")
+shader_parameter/normal_map = ExtResource("11_d703b")
+
+[node name="Player" type="CharacterBody2D" unique_id=1185532955]
+scale = Vector2(3, 3)
 collision_mask = 2
 script = ExtResource("1_kpjcp")
 speed = 30000.0
@@ -159,40 +159,52 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1177895561]
 shape = SubResource("CircleShape2D_g7b7a")
 
-[node name="Item_holder" type="Node2D" parent="." unique_id=1989079674]
-position = Vector2(16, 3)
+[node name="Facing_pivot" type="Node2D" parent="." unique_id=556711865]
 
-[node name="Visual" type="Node2D" parent="." unique_id=1662185024]
+[node name="Visual" type="Node2D" parent="Facing_pivot" unique_id=1662185024]
+z_index = 2
 rotation = -1.5707964
 
-[node name="Running" type="AnimatedSprite2D" parent="Visual" unique_id=1521054541]
+[node name="Running" type="AnimatedSprite2D" parent="Facing_pivot/Visual" unique_id=1521054541]
+visible = false
 position = Vector2(0, -5)
 sprite_frames = SubResource("SpriteFrames_gvj7u")
 
-[node name="Arm_system" type="Node2D" parent="Visual" unique_id=384760511]
-
-[node name="Right_arm" type="Node2D" parent="Visual/Arm_system" unique_id=2000342394 node_paths=PackedStringArray("shoulder", "upper_arm", "forearm", "target")]
-script = ExtResource("4_28ti7")
-shoulder = NodePath("shoulder")
-upper_arm = NodePath("Upper_arm")
-forearm = NodePath("Forearm")
-target = NodePath("../../../Item_holder")
-
-[node name="shoulder" type="Marker2D" parent="Visual/Arm_system/Right_arm" unique_id=1913532086]
-position = Vector2(-14, 0)
-
-[node name="Upper_arm" type="Sprite2D" parent="Visual/Arm_system/Right_arm" unique_id=638295072]
-material = SubResource("ShaderMaterial_v5gy4")
-texture = ExtResource("7_p4yhq")
-
-[node name="Forearm" type="Sprite2D" parent="Visual/Arm_system/Right_arm" unique_id=1635954235]
-material = SubResource("ShaderMaterial_qbdty")
-texture = ExtResource("9_rk8it")
-
-[node name="Torso_Sprite" type="Sprite2D" parent="Visual" unique_id=285508137]
+[node name="Torso_Sprite" type="Sprite2D" parent="Facing_pivot/Visual" unique_id=285508137]
 material = SubResource("ShaderMaterial_8vrlf")
 texture = ExtResource("7_qolio")
 
-[node name="Head_Sprite" type="Sprite2D" parent="Visual" unique_id=1370225365]
+[node name="Head_Sprite" type="Sprite2D" parent="Facing_pivot/Visual" unique_id=1370225365]
 material = SubResource("ShaderMaterial_1vivr")
 texture = ExtResource("9_d703b")
+
+[node name="Arm_rig" type="Node2D" parent="Facing_pivot" unique_id=384760511]
+z_index = 1
+script = ExtResource("10_o1y46")
+test_item_scene = ExtResource("12_y83ax")
+
+[node name="Shoulder" type="Marker2D" parent="Facing_pivot/Arm_rig" unique_id=9141216]
+position = Vector2(-5, 13)
+
+[node name="Elbow_pole" type="Marker2D" parent="Facing_pivot/Arm_rig" unique_id=1151008424]
+position = Vector2(-5, 33)
+
+[node name="Right_arm" type="Node2D" parent="Facing_pivot/Arm_rig" unique_id=597548522]
+
+[node name="Forearm" type="Sprite2D" parent="Facing_pivot/Arm_rig/Right_arm" unique_id=876976589]
+material = SubResource("ShaderMaterial_7lipg")
+texture = ExtResource("13_28ti7")
+offset = Vector2(9, 0)
+
+[node name="Upper_arm" type="Sprite2D" parent="Facing_pivot/Arm_rig/Right_arm" unique_id=280061630]
+material = SubResource("ShaderMaterial_tfriy")
+texture = ExtResource("11_d703b")
+offset = Vector2(10, 0)
+
+[node name="Item_motion" type="Node2D" parent="Facing_pivot" unique_id=1351948119]
+position = Vector2(27.333334, 15.666667)
+
+[node name="Item_holder" type="Node2D" parent="Facing_pivot/Item_motion" unique_id=1989079674]
+z_index = 3
+
+[node name="Gun_2" parent="Facing_pivot/Item_motion/Item_holder" unique_id=1299185138 instance=ExtResource("3_28ti7")]

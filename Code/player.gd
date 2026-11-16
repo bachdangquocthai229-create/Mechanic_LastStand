@@ -1,4 +1,3 @@
-
 extends CharacterBody2D
 
 @export var speed: float = 300.0
@@ -10,10 +9,9 @@ extends CharacterBody2D
 @onready var detection_area: Area2D = $DetectionArea
 
 
-
 var is_mobile: bool = false
 var is_desktop: bool = true
-
+var current_item: Node2D
 # Hướng di chuyển gần nhất khác Vector2.ZERO
 var last_move_direction: Vector2 = Vector2.RIGHT
 

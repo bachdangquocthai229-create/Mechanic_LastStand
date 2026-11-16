@@ -17,6 +17,8 @@ config/icon="res://icon.svg"
 [global_group]
 
 Enemy=""
+Right_hand="Marker2D of Right_hand"
+Left_hand="Marker2D of Left_hand"
 
 [input]
 

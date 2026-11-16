@@ -10,8 +10,6 @@ region = Rect2(2, 0, 32, 32)
 size = Vector2(12, 12)
 
 [node name="Gun_1" type="Node2D" unique_id=923993314]
-position = Vector2(50, 0)
-scale = Vector2(5, 5)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1383477098]
 texture = SubResource("AtlasTexture_1vivr")
@@ -19,5 +17,15 @@ texture = SubResource("AtlasTexture_1vivr")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1856521219]
 shape = SubResource("RectangleShape2D_bjjo4")
 
-[node name="Marker2D" type="Marker2D" parent="." unique_id=1424579262]
+[node name="Muzzle" type="Marker2D" parent="." unique_id=1424579262]
 position = Vector2(6, -3)
+
+[node name="Grip_point" type="Node2D" parent="." unique_id=605993444]
+
+[node name="Right_hand" type="Marker2D" parent="Grip_point" unique_id=313661291]
+position = Vector2(-5.999999, 5.9999995)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Left_hand" type="Marker2D" parent="Grip_point" unique_id=1171379415]
+position = Vector2(-5.999999, 5.9999995)
+scale = Vector2(0.99999994, 0.99999994)
