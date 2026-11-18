@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://elst0xn32iil"]
 
-[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://Character/Player.tscn" id="1_80nbo"]
-[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_e2o6t"]
-[ext_resource type="PackedScene" uid="uid://b4tbnvxt4w2s8" path="res://Character/Enemy.tscn" id="3_feb5d"]
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://Scene/Player.tscn" id="1_80nbo"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://Image/icon.svg" id="2_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://b4tbnvxt4w2s8" path="res://Scene/Enemy.tscn" id="3_feb5d"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1vivr"]
 normal = Vector2(0, 2.715)

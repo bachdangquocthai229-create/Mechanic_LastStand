@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://btoxk4hr5o58w"]
+
+[ext_resource type="Script" uid="uid://cjbm3sl6yn6eb" path="res://System/Item_system/Data/Interaction/interaction_data.gd" id="1_aypcv"]
+[ext_resource type="Script" uid="uid://21b3ikebpbm8" path="res://System/Item_system/Data/item_data.gd" id="2_ig4ej"]
+[ext_resource type="Resource" uid="uid://bs0xgv7sloqej" path="res://System/Item_system/Item_resource/Weapon/Gun_1_rifle.tres" id="3_ig4ej"]
+
+[resource]
+script = ExtResource("2_ig4ej")
+item_id = &"Rifle_base"
+display_name = "Rifle base"
+description = "Rifle báe"
+item_type = 0
+weapon_data = ExtResource("3_ig4ej")
+metadata/_custom_type_script = "uid://21b3ikebpbm8"

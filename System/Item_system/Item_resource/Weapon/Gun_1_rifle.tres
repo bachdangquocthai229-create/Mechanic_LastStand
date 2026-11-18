@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="RangedWeaponData" format=3 uid="uid://bs0xgv7sloqej"]
+
+[ext_resource type="Script" uid="uid://duq61e16xik15" path="res://System/Item_system/Data/Weapon/range_weapon_data.gd" id="1_86pqe"]
+
+[resource]
+script = ExtResource("1_86pqe")
+ammo_item_id = &"Ammo_rifle"
+metadata/_custom_type_script = "uid://duq61e16xik15"

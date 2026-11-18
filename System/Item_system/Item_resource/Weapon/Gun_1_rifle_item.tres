@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://d16iwvqe0k8pw"]
+
+[ext_resource type="Script" uid="uid://cjbm3sl6yn6eb" path="res://System/Item_system/Data/Interaction/interaction_data.gd" id="1_v0dgt"]
+[ext_resource type="Script" uid="uid://21b3ikebpbm8" path="res://System/Item_system/Data/item_data.gd" id="2_j6bg4"]
+
+[resource]
+script = ExtResource("2_j6bg4")
+item_id = &"weapon_gun_1_rifle"
+display_name = "Gun 1 Rifle"
+metadata/_custom_type_script = "uid://21b3ikebpbm8"
